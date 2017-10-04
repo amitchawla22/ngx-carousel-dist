@@ -58,7 +58,7 @@ var NgxCarouselComponent = /** @class */ (function () {
             this.carouselPoint();
         }
     };
-    NgxCarouselComponent.prototype.ngAfterViewInit = function () {
+    NgxCarouselComponent.prototype.ngAfterViewChecked = function () {
         var styleItem = document.createElement('style');
         this.carouselInner.appendChild(styleItem);
         this.storeCarouselData();

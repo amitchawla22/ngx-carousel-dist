@@ -1,6 +1,6 @@
-import { ElementRef, Renderer, OnInit, AfterViewInit, OnChanges, EventEmitter } from '@angular/core';
+import { ElementRef, Renderer, OnInit, OnChanges, EventEmitter, AfterViewChecked } from '@angular/core';
 import { CarouselStore } from './ngx-carousel.interface';
-export declare class NgxCarouselComponent implements OnInit, AfterViewInit, OnChanges {
+export declare class NgxCarouselComponent implements OnInit, AfterViewChecked, OnChanges {
     private el;
     private renderer;
     leftBtn: any;
@@ -28,7 +28,7 @@ export declare class NgxCarouselComponent implements OnInit, AfterViewInit, OnCh
     constructor(el: ElementRef, renderer: Renderer);
     ngOnInit(): void;
     ngOnChanges(changes: any): void;
-    ngAfterViewInit(): void;
+    ngAfterViewChecked(): void;
     onResizing(event: any): void;
     ontouching(event: any): void;
     private touch();

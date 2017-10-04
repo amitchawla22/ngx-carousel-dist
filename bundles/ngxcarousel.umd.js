@@ -60,7 +60,9 @@ var NgxCarouselComponent = /** @class */ (function () {
     };
     NgxCarouselComponent.prototype.ngAfterViewChecked = function () {
         var styleItem = document.createElement('style');
-        this.carouselInner.appendChild(styleItem);
+        if (!this.carouselInner.querySelectorAll('style').length) {
+            this.carouselInner.appendChild(styleItem);
+        }
         this.storeCarouselData();
         this.carouselInterval();
         this.onWindowScrolling();
